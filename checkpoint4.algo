@@ -1,0 +1,24 @@
+ALGORITHM tri par insertion 
+VAR
+    aux,i,j:integer;
+    tab:array of Integer[100];
+    T:tab;
+BEGIN
+   Read (n);
+   FOR i FROM 0 TO n-1 STEP 1  DO
+       Read (T[i]);
+   END_FOR
+   write ("tableau avant le tri " T)
+
+   FOR i FROM 1 TO n-1 STEP 1 DO
+      aux=:T[i];
+      j:=i;
+        WHILE ((T[j-1]>aux)AND (j>0)) DO
+            T[j]:=T[j-1];
+            j:=j-1;
+        END_WHILE 
+        T[j]:=aux;
+         END_FOR
+    write ("tableau aprés le tri ",T);
+    
+END
